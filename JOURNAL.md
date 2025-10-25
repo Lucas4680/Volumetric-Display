@@ -6,10 +6,6 @@
   ==================================================================
 -->
 
-This is my journal of the design and building process of **Volumetric Display**.  
-You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/708).
-
-
 ## 10/19/2025 - Recap of Past Work  
 
 Over the course of the past few months, I've started brainstorming, researching, and building this project. So far, I've designed a first PCB design and spent countless time dealing with the many issues with this design. I've managed to get the display working but have decided to nearly completely redo the project building on all the knowledge I've gained from this first trial. Most of these issues came from lack of experience in PCB design and electronics. 
@@ -17,4 +13,14 @@ Over the course of the past few months, I've started brainstorming, researching,
 ![image_2025-10-19_163122512.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzU3MSwicHVyIjoiYmxvYl9pZCJ9fQ==--2ae1d49487d6cee731cbcd70ac57f3373e420780/image_2025-10-19_163122512.png)
 
 (I would like to note that the rest of this project will be almost completely new and only build off past work)  
+
+## 10/24/2025 - Motor and Power Delivery Research and Testing  
+
+I began by testing the previous 5v dc motor I had to see if it could rotate fast enough and with enough torque. I found that it did have enough speed to create the persistence of vision effect. Then I tested the power delivery contacts (5v power from usb has to travel up to the rotating pcb housing the mcu, screen, motor, etc) and found that they were too spotty and caused too much friction for the motor to keep up with.
+
+I then researched potential new methods of transferring power (slip rings - not reliable and rated for fast speeds, capacitive coupling - too finicky and unrealistic to set up, and wireless - again unrealistic to implement) but concluded that sliding contacts were still the best way forward. I also researched potential new motors that could handle the extra friction. I found a 12v motor with gearbox attached that gives promising results. In addition, I researched different ways to create the sliding contacts, carbon brushes, copper brushes, and pogo pins among others.
+
+Previous motor test at speed:
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTM1NiwicHVyIjoiYmxvYl9pZCJ9fQ==--6c89feec267dc1d5c125adc02669c3869e57459f/image.png)
+  
 
