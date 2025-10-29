@@ -24,3 +24,10 @@ Previous motor test at speed:
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTM1NiwicHVyIjoiYmxvYl9pZCJ9fQ==--6c89feec267dc1d5c125adc02669c3869e57459f/image.png)
   
 
+## 10/28/2025 - Further Research  
+
+Continued researching the redesigns that were necessary. Began by reworking the power transfer from usb into the rotating pcb, decided on using concentric rings of copper tape (or similar) that wrap around the motor, with brush contacts pressed onto it from the stator. Also settled on using a hall effect sensor with multiple magnets in the base to more accurately capture rotational data. Slices of the image can then be interpolated more accurately from these readings. I also learned that ESP32S3 has a function for digital interrupts that has no overhead on the CPU.
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjQ0NCwicHVyIjoiYmxvYl9pZCJ9fQ==--e70436df975bf06625013ec5c7c15b6d3e9f9b88/image.png)
+  
+
