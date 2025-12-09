@@ -117,13 +117,10 @@ void setup() {
     //delay(1000);
     for(int i = 0; i < 128; i++) {
       for (int x = 0; x < 64; x++) {
-        // Oled.drawPixel(i, x, SSD1306_INVERSE);
-        // Oled.display();
         drawPixelFast(i, x, false); 
         //delay(10);
       }
     }
-    //delay(1000);
   }
 }
 
@@ -131,27 +128,4 @@ float t = 0;  // Time variable for animation
 
 void loop() {
 
-
-
-
-  // Oled.clearDisplay();
-
-  // // Draw animated diagonal sine bands
-  // for (int y = 0; y < 64; y++) {
-  //   // Sine-controlled diagonal banding
-  //   float wave = sin((y * 0.15) + t) * 30; // wave range [-30, +30]
-  //   int centerX = (int)(wave + 64);       // center the wave horizontally
-
-  //   // Draw a soft band
-  //   for (int w = -4; w <= 4; w++) { // thickness 9
-  //     int x = centerX + w + y / 2; // diagonal skew
-  //     if (x >= 0 && x < 128) {
-  //       Oled.drawPixel(x, y, SSD1306_WHITE);
-  //     }
-  //   }
-  // }
-
-  // Oled.display();
-  // t += 0.1;     // Animation speed
-  // delay(100);    // Frame delay
 }
