@@ -129,3 +129,5 @@ float t = 0;  // Time variable for animation
 void loop() {
 
 }
+
+// NOTE: This firmware currently just cycles through each pixel on the dispay to make sure the PCB works. Extensive code will be written later as it's really hard without having the device to rapidly test on.
