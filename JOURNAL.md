@@ -54,8 +54,13 @@ After importing the PCB into fusion and beginning modeling the 3d printed parts,
 I began by cadding the joint  between the motor and the PCB, which was somewhat difficult since I had to avoid all the components on the PCB. Then I created the OLED mount on the other side of the PCB. For the outside shell, I created a simple enclosure that accepts the motor shaft at the bottom. The case is split into a lower and upper module to make assembly and modifying easier. The custom slip ring that transfers power from stationary USB to the rotating PCB was the most difficult part to make. From previous research, I determined it would be best to use a conductive tape and some sort of brush. There wasn't much usable space around the body of the motor to create the rings but I managed to find a solution that would work pretty well. I opted in the end to have the brush also made of the same conductive tape and create a 90 degree arc around the motor to increase contact area. It's tensioned with a small spring made from 3d printed material. This would make it easy to tune the strength by rotating around the pivot.
 
 Render:
+
 ![Volumetric_2025-Nov-29_07-59-37PM-000_CustomizedView14745335757_png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY0MjIsInB1ciI6ImJsb2JfaWQifX0=--bac51960adeeb5bf1cc093a0995d43b31d7dc7f7/Volumetric_2025-Nov-29_07-59-37PM-000_CustomizedView14745335757_png.png)
+
 Slice: 
+
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY0MjMsInB1ciI6ImJsb2JfaWQifX0=--4677e5103f7fbe6c6d024689f6b22ce0ab447d3a/image.png)
+
 Brush (The center circle is the motor + conductive ring):
+
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY0MjQsInB1ciI6ImJsb2JfaWQifX0=--87cb851712facc241fb420aef456c3b4e2f4e4ef/image.png)
