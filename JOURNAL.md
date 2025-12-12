@@ -29,5 +29,30 @@ Previous motor test at speed:
 Continued researching the redesigns that were necessary. Began by reworking the power transfer from usb into the rotating pcb, decided on using concentric rings of copper tape (or similar) that wrap around the motor, with brush contacts pressed onto it from the stator. Also settled on using a hall effect sensor with multiple magnets in the base to more accurately capture rotational data. Slices of the image can then be interpolated more accurately from these readings. I also learned that ESP32S3 has a function for digital interrupts that has no overhead on the CPU.
 
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjQ0NCwicHVyIjoiYmxvYl9pZCJ9fQ==--e70436df975bf06625013ec5c7c15b6d3e9f9b88/image.png)
-  
 
+
+## 11/18/2025 - Completed PCB
+
+Drew, Wired, and Routed the PCB. Creating a circuit to limit the amount of current was a big challenge. Due to the limited USB power I have onboard, if the motor draws overcurrent for even a fraction of a second, the entire board can brown or black out. Thus, I implemented a fast acting current trip using a shunt resistor that also triggers interrupt on the MCU to hold the motor off. This took many iterations on schematics and parts before arriving to a hopefully working circuit. The rest of the board required planning for mounting as well as part placement to ensure a balanced board with a center of gravity over the motor. Otherwise, rotation would cause vibrations. I also consulted with teachers and instructors on my robotics team regarding my layouts and designs. 
+
+Overall the entire process took a lot of iteration and realizations of how little I knew and how much I had to revise.
+
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTIzNTYsInB1ciI6ImJsb2JfaWQifX0=--4d70eb8835c00b1452a15362e89bf39e3a4c7efd/image.png)
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTIzNjEsInB1ciI6ImJsb2JfaWQifX0=--744103f3d16877195b9df34fd722376f4aa4e1ce/image.png)
+
+
+## 11/20/2025 - PCB Revisions
+
+After importing the PCB into fusion and beginning modeling the 3d printed parts, I began to run into issues with the placement of parts getting in the way of supports. Thus I revised the PCB with these issues in mind. This did throw off the center of gravity a little but some tuning once the board is finished will account for it (I left pads to add weight on).
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTI3ODcsInB1ciI6ImJsb2JfaWQifX0=--e218356e3c3ce4d527b0dc2a70d5521242991a5f/image.png)
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTI3ODgsInB1ciI6ImJsb2JfaWQifX0=--e5efd86f3de95ff130967f79729eaf9bc9bf85f3/image.png)
+
+
+# 11/30/2025 - CAD
+
+I began by cadding the joint  between the motor and the PCB, which was somewhat difficult since I had to avoid all the components on the PCB. Then I created the OLED mount on the other side of the PCB. For the outside shell, I created a simple enclosure that accepts the motor shaft at the bottom. The case is split into a lower and upper module to make assembly and modifying easier. The custom slip ring that transfers power from stationary USB to the rotating PCB was the most difficult part to make. From previous research, I determined it would be best to use a conductive tape and some sort of brush. There wasn't much usable space around the body of the motor to create the rings but I managed to find a solution that would work pretty well. I opted in the end to have the brush also made of the same conductive tape and create a 90 degree arc around the motor to increase contact area. It's tensioned with a small spring made from 3d printed material. This would make it easy to tune the strength by rotating around the pivot.
+
+Render:![Volumetric_2025-Nov-29_07-59-37PM-000_CustomizedView14745335757_png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY0MjIsInB1ciI6ImJsb2JfaWQifX0=--bac51960adeeb5bf1cc093a0995d43b31d7dc7f7/Volumetric_2025-Nov-29_07-59-37PM-000_CustomizedView14745335757_png.png)
+Slice: ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY0MjMsInB1ciI6ImJsb2JfaWQifX0=--4677e5103f7fbe6c6d024689f6b22ce0ab447d3a/image.png)
+Brush (The center circle is the motor + conductive ring):![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY0MjQsInB1ciI6ImJsb2JfaWQifX0=--87cb851712facc241fb420aef456c3b4e2f4e4ef/image.png)
